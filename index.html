@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#050505;
+color:#f5f5f5;
+font-family:'Inter',sans-serif;
+overflow-x:hidden;
+}
+
+.grain{
+position:fixed;
+inset:0;
+pointer-events:none;
+opacity:.03;
+z-index:9999;
+background-image:
+repeating-radial-gradient(
+#fff 0,
+#fff 1px,
+transparent 1px,
+transparent 100%
+);
+background-size:4px 4px;
+}
+
+section{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:30px;
+position:relative;
+}
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.title{
+font-family:'Cormorant Garamond',serif;
+font-size:4rem;
+font-weight:400;
+letter-spacing:.05em;
+margin-bottom:20px;
+}
+
+.text{
+max-width:700px;
+line-height:2;
+font-size:1.05rem;
+color:#d7d7d7;
+}
+
+.btn{
+margin-top:40px;
+padding:14px 36px;
+border-radius:999px;
+border:1px solid rgba(255,255,255,.2);
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+.btn:hover{
+background:rgba(255,255,255,.08);
+}
+
+.photo-section img{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
+filter:
+brightness(.35)
+contrast(1.1)
+saturate(.9);
+animation:zoom 15s ease-in-out infinite alternate;
+}
+
+.photo-section::after{
+content:"";
+position:absolute;
+inset:0;
+background:
+radial-gradient(
+circle,
+transparent 35%,
+rgba(0,0,0,.75) 100%
+);
+z-index:1;
+}
+
+.overlay{
+position:relative;
+z-index:2;
+text-align:center;
+}
+
+.quote{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+line-height:1.6;
+max-width:700px;
+text-shadow:0 0 25px rgba(0,0,0,.5);
+}
+
+.video-wrap{
+width:min(95vw,900px);
+}
+
+video{
+width:100%;
+border-radius:20px;
+box-shadow:0 0 40px rgba(255,255,255,.08);
+}
+
+.fade{
+opacity:0;
+transform:translateY(40px);
+transition:1.2s ease;
+}
+
+.fade.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.ending{
+flex-direction:column;
+text-align:center;
+}
+
+.endline{
+font-family:'Cormorant Garamond',serif;
+font-size:2rem;
+margin:18px 0;
+opacity:0;
+}
+
+.show .endline:nth-child(1){
+animation:fadeWords 1s forwards;
+}
+
+.show .endline:nth-child(2){
+animation:fadeWords 1s 2s forwards;
+}
+
+.show .endline:nth-child(3){
+animation:fadeWords 1s 4s forwards;
+}
+
+.show .endline:nth-child(4){
+animation:fadeWords 1s 6s forwards;
+}
+
+.show .endline:nth-child(6){
+animation:fadeWords 1s 9s forwards;
+}
+
+.show .endline:nth-child(7){
+animation:fadeWords 1s 11s forwards;
+}
+
+.show .endline:nth-child(8){
+animation:fadeWords 1s 13s forwards;
+}
+
+@keyframes fadeWords{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes zoom{
+from{
+transform:scale(1);
+}
+to{
+transform:scale(1.08);
+}
+}
+
+@media(max-width:768px){
+
+.title{
+font-size:3rem;
+}
+
+.quote{
+font-size:1.6rem;
+}
+
+.endline{
+font-size:1.5rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="grain"></div>
+
+<section class="hero">
+
+<h1 class="title">Happy Birthday.</h1>
+
+<p class="text">
+
+I thought this day would pass
+<br>
+like any other.
+
+<br><br>
+
+But somehow,
+
+<br>
+
+I still wanted to make something.
+
+<br><br>
+
+Yet here we are.
+
+</p>
+
+<a href="#intro" class="btn">
+For You
+</a>
+
+</section>
+
+<section id="intro" class="hero fade">
+
+<div class="quote">
+
+Before you watch this,
+
+<br><br>
+
+there's something
+I want to say.
+
+</div>
+
+</section>
+
+<section id="cover" class="photo-section fade">
+
+<img src="cover.jpeg">
+
+<div class="overlay">
+
+<div class="quote">
+
+Time has a way of changing things.
+
+</div>
+
+</div>
+
+</section>
+
+<section class="photo-section fade">
+
+<img src="memory1.jpeg">
+
+<div class="overlay">
+
+<div class="quote">
+
+Some things change quietly.
+
+<br><br>
+
+Before we even notice.
+
+</div>
+
+</div>
+
+</section>
+
+<section class="hero fade">
+
+<div class="quote">
+
+December feels far away now.
+
+</div>
+
+</section>
+
+<section class="photo-section fade">
+
+<img src="memory2.jpeg">
+
+<div class="overlay">
+
+<div class="quote">
+
+Some moments stay.
+
+<br><br>
+
+Not because they're recent.
+
+<br><br>
+
+But because they mattered.
+
+</div>
+
+</div>
+
+</section>
+
+<section class="photo-section fade">
+
+<img src="memory3.jpeg">
+
+<div class="overlay">
+
+<div class="quote">
+
+Not because we hold on.
+
+<br><br>
+
+But because they once mattered.
+
+</div>
+
+</div>
+
+</section>
+
+<section class="hero fade">
+
+<div class="quote">
+
+Some stories don't need an ending.
+
+<br><br>
+
+They just become memories.
+
+<br><br><br>
+
+This one is for you.
+
+</div>
+
+</section>
+
+<section class="hero fade">
+
+<p class="text" style="margin-bottom:25px">
+
+For today.
+
+<br><br>
+
+For your birthday.
+
+<br><br>
+
+For you.
+
+</p>
+
+<div class="video-wrap">
+
+<video controls>
+
+<source src="birthday.mp4" type="video/mp4">
+
+</video>
+
+</div>
+
+</section>
+
+<section class="ending fade">
+
+<div class="endline">Thank you.</div>
+
+<div class="endline">Not for staying.</div>
+
+<div class="endline">Not for leaving.</div>
+
+<div class="endline">
+Just for being a chapter worth remembering.
+</div>
+
+<div style="height:70px"></div>
+
+<div class="endline">Happy Birthday.</div>
+
+<div class="endline">Wherever life takes you next.</div>
+
+<div class="endline">Take care.</div>
+
+</section>
+
+<script>
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add('show');
+
+}
+
+});
+
+},{threshold:0.2});
+
+document.querySelectorAll('.fade').forEach(el=>{
+
+observer.observe(el);
+
+});
+
+</script>
+
+</body>
+</html>
