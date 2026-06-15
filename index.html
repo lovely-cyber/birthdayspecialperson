@@ -50,10 +50,7 @@ justify-content:center;
 align-items:center;
 padding:30px;
 position:relative;
-overflow:hidden;
 }
-
-/* HERO */
 
 .hero{
 flex-direction:column;
@@ -87,14 +84,6 @@ transition:.3s;
 
 .btn:hover{
 background:rgba(255,255,255,.08);
-backdrop-filter:blur(8px);
-}
-
-/* PHOTO SECTION */
-
-.photo-section{
-position:relative;
-overflow:hidden;
 }
 
 .photo-section img{
@@ -103,26 +92,22 @@ inset:0;
 width:100%;
 height:100%;
 object-fit:cover;
-object-position:center center;
-
 filter:
-brightness(.58)
-contrast(1.05)
-saturate(1.05);
-
-animation:zoom 18s ease-in-out infinite alternate;
+brightness(.35)
+contrast(1.1)
+saturate(.9);
+animation:zoom 15s ease-in-out infinite alternate;
 }
 
-.photo-section::before{
+.photo-section::after{
 content:"";
 position:absolute;
 inset:0;
 background:
-linear-gradient(
-to bottom,
-rgba(0,0,0,.55),
-rgba(0,0,0,.15),
-rgba(0,0,0,.65)
+radial-gradient(
+circle,
+transparent 35%,
+rgba(0,0,0,.75) 100%
 );
 z-index:1;
 }
@@ -131,22 +116,15 @@ z-index:1;
 position:relative;
 z-index:2;
 text-align:center;
-padding:20px;
 }
 
 .quote{
 font-family:'Cormorant Garamond',serif;
-font-size:2.2rem;
+font-size:2rem;
 line-height:1.6;
-max-width:750px;
-margin:auto;
-
-text-shadow:
-0 4px 15px rgba(0,0,0,.6),
-0 0 25px rgba(0,0,0,.5);
+max-width:700px;
+text-shadow:0 0 25px rgba(0,0,0,.5);
 }
-
-/* VIDEO */
 
 .video-wrap{
 width:min(95vw,900px);
@@ -155,11 +133,8 @@ width:min(95vw,900px);
 video{
 width:100%;
 border-radius:20px;
-box-shadow:
-0 0 40px rgba(255,255,255,.08);
+box-shadow:0 0 40px rgba(255,255,255,.08);
 }
-
-/* SCROLL ANIMATION */
 
 .fade{
 opacity:0;
@@ -171,8 +146,6 @@ transition:1.2s ease;
 opacity:1;
 transform:translateY(0);
 }
-
-/* ENDING */
 
 .ending{
 flex-direction:column;
@@ -230,83 +203,26 @@ from{
 transform:scale(1);
 }
 to{
-transform:scale(1.03);
+transform:scale(1.08);
 }
 }
-
-/* TABLET */
 
 @media(max-width:768px){
 
 .title{
-font-size:2.8rem;
+font-size:3rem;
 }
 
 .quote{
-font-size:1.8rem;
-line-height:1.5;
+font-size:1.6rem;
 }
 
 .endline{
-font-size:1.4rem;
-}
-
-.text{
-font-size:1rem;
-line-height:1.8;
-}
-
-/*
-PENTING
-Karena foto landscape,
-geser fokus ke atas.
-*/
-
-.photo-section img{
-object-position:center 20%;
-}
-
-}
-
-/* HP KECIL */
-
-@media(max-width:480px){
-
-section{
-padding:20px;
-}
-
-.title{
-font-size:2.2rem;
-}
-
-.quote{
 font-size:1.5rem;
-line-height:1.5;
-}
-
-.text{
-font-size:.95rem;
-}
-
-.endline{
-font-size:1.2rem;
-}
-
-.btn{
-padding:12px 28px;
-}
-
-/*
-Kalau wajah masih kepotong,
-ubah 10% menjadi 0%
-*/
-
-.photo-section img{
-object-position:center 10%;
 }
 
 }
+
 </style>
 </head>
 
